@@ -5,8 +5,9 @@ import 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
+// Required to connect navigation to tab layout
 export const unstable_settings = {
-  anchor: '(tabs)',
+  initialRouteName: '(tabs)',  
 };
 
 export default function RootLayout() {
@@ -14,11 +15,26 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
+      
+      {/* Navigation Stack Controller */}
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="modal" options={{ presentation: 'modal', title: 'Modal' }} />
+        {/* Main dashboard with Blind / Hearing / Cognitive tabs */}
+        <Stack.Screen 
+          name="(tabs)" 
+          options={{ headerShown: false }} 
+        />
+
+        {/* Optional modal page (for future features) */}
+        <Stack.Screen 
+          name="modal" 
+          options={{ 
+            presentation: 'modal',
+            title: 'Quick Action',
+          }} 
+        />
       </Stack>
-      <StatusBar style="auto" />
+
+      <StatusBar style={colorScheme === 'dark' ? 'light' : 'dark'} />
     </ThemeProvider>
   );
 }
