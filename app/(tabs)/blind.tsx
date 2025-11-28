@@ -1,13 +1,12 @@
-// app/(tabs)/blind.tsx
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import {
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  SafeAreaView,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from 'react-native';
 
 export default function BlindScreen() {
@@ -19,7 +18,7 @@ export default function BlindScreen() {
       >
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.title}>Accessibility Assistant</Text>
+          <Text style={styles.title}> Blind  Assistant</Text>
           <Ionicons name="person-circle-outline" size={30} color="#ffffff" />
         </View>
 
