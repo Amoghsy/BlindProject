@@ -11,7 +11,7 @@ import {
 } from "react-native";
 
 // ⭐ GEMINI CONFIG
-const GEMINI_KEY = "AIzaSyCwA8-xRTwUymLa4Z8Sq0DzXqXjeaOxbBg"; // <-- put your key here
+const GEMINI_KEY =  process.env.GEMINI_API_KEY; // <-- put your key here
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_KEY}`;
 
 type Task = { label: string; done: boolean };

@@ -15,7 +15,7 @@ import {
 } from "react-native";
 
 // ---- Gemini API Key ----
-const GEMINI_KEY = "AIzaSyCwA8-xRTwUymLa4Z8Sq0DzXqXjeaOxbBg";
+const GEMINI_KEY = process.env.GEMINI_API_KEY || "";
 
 type SpeechModuleType = {
   startListening: () => void;
